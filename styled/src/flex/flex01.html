@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 예제</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row; /*아이템을 가로방향으로 배치*/
+            /*flex-direction: column; /*아이템을 세로방향으로 배치*/
+
+            /* 주축의 정렬 방법 */
+            justify-content: flex-start;  /*가로 방향으로 시작 위치에 정렬*/
+            justify-content: space-between; /* 가로 방향으로 양 끝에 정렬 */
+            justify-content: space-around; /* 가로 방향으로 고르게 분배 */
+            justify-content: center; /* 가로방향으로 가운데 정렬 */
+            gap: 16px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
