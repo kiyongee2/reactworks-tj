@@ -18,7 +18,7 @@ const FetchExample = () => {
         <div>
             <h2>할 일(To-do) 데이터</h2>
             <ul>
-            {data.map((todo) => (
+            {data.map(todo => (
                 <li key={todo.id}>{todo.title}</li>
             ))}
             </ul>
