@@ -1,19 +1,25 @@
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import User from './context/User'
+import Header from './layouts/Header'
+import BankReducer from './reducer/BankReducer'
 import CountReducer from './reducer/CountReducer'
-import Counter from './ref/Counter'
-import InputFocus from './ref/InputFocus'
+import ParentTheme from './context/ParentTheme'
 
 function App() {
 
   return (
     <>
       <section id="container">
-        {/* <Counter /> */}
-        {/* <InputFocus /> */}
-        {/* <CountReducer /> */}
-        <User />
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<BankReducer />} />
+            <Route path="/bank" element={<BankReducer />} />
+            <Route path='/counter' element={<CountReducer />} />
+            <Route path='/theme' element={<ParentTheme />} />
+          </Routes>
+        </BrowserRouter>
       </section>
     </>
   )
